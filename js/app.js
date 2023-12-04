@@ -11,29 +11,29 @@ class Persona {
     }
     mostrarGeneracion() {
       if (1994 <= this.anioNacimiento <= 2010) {
-        document.write(`<p>Usted pertece a la generacion Z</p>`);
-        document.write(`<p>Rango Caracteristico: Irreverencia</p>`);
+        alert(`Usted pertece a la generacion Z<`);
+        alert(`Rango Caracteristico: Irreverencia`);
       } else if (1981 <= this.anioNacimiento <= 1993) {
-        document.write(`<p>Usted pertece a la generacion Y (millennials)</p>`);
-        document.write(`<p>Rango Caracteristico: Frustracion</p>`);
+        alert(`<p>Usted pertece a la generacion Y (millennials)</p>`);
+        alert(`<p>Rango Caracteristico: Frustracion</p>`);
       } else if (1969 <= this.anioNacimiento <= 1980) {
-        document.write(`<p>Usted pertece a la generacion X</p>`);
-        document.write(`<p>Rango Caracteristico: Obsesion por el exito</p>`);
+        alert(`<p>Usted pertece a la generacion X</p>`);
+        alert(`<p>Rango Caracteristico: Obsesion por el exito</p>`);
       } else if (1949 <= this.anioNacimiento <= 1968) {
-        document.write(`<p>Usted pertece a la generacion Baby Boom</p>`);
-        document.write(`<p>Rango Caracteristico: Ambicion</p>`);
+        alert(`<p>Usted pertece a la generacion Baby Boom</p>`);
+        alert(`<p>Rango Caracteristico: Ambicion</p>`);
       } else if (1930 <= this.anioNacimiento <= 1948) {
-        document.write(
+        alert(
           `<p>Usted pertece a la generacion Silent Genertion (Los niños de la posguerra)</p>`
         );
-        document.write(`<p>Rango Caracteristico: Austeridad</p>`);
+        alert(`<p>Rango Caracteristico: Austeridad</p>`);
       }
     }
     esMayorEdad() {
       if (this.edad >= 18) {
-        document.write(`<p>La persona es mayor de edad</p>`);
+        alert(`La persona es mayor de edad`);
       } else {
-        document.write(`<p>La persona no es mayor de edad</p>`);
+        alert(`La persona no es mayor de edad`);
       }
     }
     mostrarDatos() {
@@ -47,3 +47,24 @@ class Persona {
     }
   }
   
+  //traigo los datos del formulario
+  function cargarPersona() {
+    const nombre = document.getElementById("nombre");
+    const edad = parseInt(document.getElementById("Edad"));
+    const dni = document.getElementById("dni");
+    const sexo = document.getElementById("sexo");
+    const peso = parseFloat(document.getElementById("peso"));
+    const altura = parseFloat(document.getElementById("altura"));
+    const anioNacimiento = parseInt(document.getElementById("anioNacimiento"));
+
+    persona = new Persona(nombre, edad, dni, sexo, peso, altura, anioNacimiento);
+    alert("Persona creada exitosamente.");
+}
+
+function mayor() {
+    persona.esMayorEdad();
+}
+
+function gene() {
+    persona.mostrarGeneracion();
+}

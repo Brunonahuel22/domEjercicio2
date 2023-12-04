@@ -82,21 +82,11 @@
           </div>
           <div class="mb-3">
             <label for="peso">Peso:</label>
-            <input
-              type="number"
-              id="peso"
-              class="form-control"
-              required
-            /><br />
+            <input type="number" id="peso" class="form-control" required />
           </div>
           <div class="mb-3">
             <label for="altura">Altura:</label>
-            <input
-              type="number"
-              id="altura"
-              class="form-control"
-              required
-            /><br />
+            <input type="number" id="altura" class="form-control" required />
           </div>
           <div class="mb-3">
             <label for="anioNacimiento">Año de Nacimiento:</label>
@@ -105,24 +95,28 @@
               id="anioNacimiento"
               class="form-control"
               required
-            /><br />
+            />
           </div>
 
-         <div class="text-center mb-2">
-            <button type="submit" class="btn btn-primary">
-                Crear Persona
-              </button>
-         </div>
-         <div class="text-center mb-2">
-            <button type="submit" class="btn btn-primary">
-                Mostrar Generaciones
-              </button>
-         </div>
-        <div class="text-center mb-2">
-            <button type="submit" class="btn btn-secondary">
-                Es mayor de edad?
-              </button>
-        </div>
+          <div class="text-center mb-2">
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="cargarPersona()"
+            >
+              Crear Persona
+            </button>
+          </div>
+          <div class="text-center mb-2">
+            <button type="button" class="btn btn-primary" onclick="gene()">
+              Mostrar Generaciones
+            </button>
+          </div>
+          <div class="text-center mb-2">
+            <button type="button" class="btn btn-secondary" onclick="mayor()">
+              Es mayor de edad?
+            </button>
+          </div>
         </form>
       </section>
     </main>
@@ -135,5 +129,6 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
