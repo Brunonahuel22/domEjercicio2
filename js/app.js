@@ -1,12 +1,5 @@
 class Persona {
-    constructor(
-      parametro_nombre,
-      parametro_edad,
-      parametro_DNI,
-      parametro_sexo,
-      parametro_peso,
-      parametro_altura,
-      parametro_anioNacimiento
+    constructor(parametro_nombre,parametro_edad,parametro_DNI,parametro_sexo,parametro_peso,parametro_altura,parametro_anioNacimiento
     ) {
       this.nombre = parametro_nombre;
       this.edad = parametro_edad;
@@ -53,9 +46,4 @@ class Persona {
       document.write(`<p>Año de Nacimiento: ${this.anioNacimiento}</p>`);
     }
   }
-  
-  const personaEjemplo = new Persona("Juan", 25, "12345678", "H", 70, 1.75, 1998);
-  personaEjemplo.mostrarDatos();
-  personaEjemplo.mostrarGeneracion();
-  personaEjemplo.esMayorEdad();
   
